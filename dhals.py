@@ -9,8 +9,8 @@ tab_ablib = ['J4.1', 'J4.2', 'J4.3', 'J4.4', 'J4.5', 'J4.6', 'J4.7', 'J4.8', 'J4
 tab_kernel = ['RES_5V', 'RES_VBAT', 'RES_NRST', 'RES_UsbAD-', 'RES_3V3', 'RES_UsbAD+', 'A23', 'A22', 'RES_GND', 'A21', 'A24', 'A31', 'A25', 'A30', 'A26', 'RES_UsbBD+', 'A27', 'RES_UsbBD-', 'A28', 'RES_UsbCD-', 'A29', 'RES_UsbCD+', 'A0', 'A1', 'A8', 'A7', 'A6', 'A5', 'C28', 'C27', 'C4', 'C31', 'C3', 'ADC_AD0', 'RES_1W', 'ADC_AD1', 'C1', 'ADC_AD2', 'C0', 'ADC_AD3']
 
 parser = argparse.ArgumentParser(description='This can be used standalone or with Hal (https://github.com/gandalfk7/hal)')
-parser.add_argument('-s','--sensor', help='Pin you want to modify',required=True)
-parser.add_argument('-a','--action',help='Action to apply to the sensor', required=True)
+parser.add_argument('-s','--sensor', help='pin to manage, on Arietta G25 are J4.x where "x" is the physical pin number',required=True)
+parser.add_argument('-a','--action',help='on, off, status: action to apply to the pin', required=True)
 args = parser.parse_args()
  
 ## show values ##
